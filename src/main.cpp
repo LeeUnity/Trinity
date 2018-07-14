@@ -1292,7 +1292,7 @@ int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
 
     if(nHeight == 10)
     {
-        nSubsidy *= 20000;
+        nSubsidy *= 420000;
     }
 
     if(rand > 0 && rand < 60)
@@ -1305,26 +1305,21 @@ int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
     }
     if(rand > 80 && rand < 90)
     {
-        nSubsidy *= 5;
+        nSubsidy *= 3;
     }
     if(rand > 90 && rand < 95)
     {
-        nSubsidy *= 10;
+        nSubsidy *= 4;
     }
     if(rand > 95 && rand < 99)
     {
-        nSubsidy *= 20;
+        nSubsidy *= 13;
     }
     if(rand > 99 && rand < 101)
     {
-        nSubsidy *= 50;
+        nSubsidy *= 20;
     }
 
-    if(nHeight > 900000) 
-                nSubsidy = 0;
-			
-    if(nHeight > 915550)
-		        nSubsidy = (1 + rand) * COIN;
 
 
     return nSubsidy + nFees;
